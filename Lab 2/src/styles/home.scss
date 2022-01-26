@@ -1,0 +1,185 @@
+#header {
+  font-size: xx-large;
+  font-weight: 400;
+  margin-top: 1em;
+}
+
+#tasklist {
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: auto;
+
+  ::-webkit-scrollbar {
+    width: 2px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+
+  ul {
+    list-style-type: none;
+    margin: 1em 0 0.5em 0;
+    width: 100%;
+    // overflow: auto;
+
+    li {
+      width: 95%;
+      .task-container {
+        margin: 0.5em 0;
+        width: 100%;
+        padding: 0.5em 0.5em;
+        border: 0.01em solid rgb(185, 184, 184);
+
+        div.task-top {
+          display: flex;
+          justify-content: space-between;
+          p.task-name {
+            font-weight: 600;
+            font-size: larger;
+          }
+          div.task-buttons {
+            button {
+              background: none;
+              border: none;
+              margin: 0.2em 0.5em;
+              cursor: pointer;
+              padding: 0.2em 0.3em;
+              border-radius: 0.2em;
+            }
+
+            button.edit-task-button {
+              &:hover {
+                background: rgb(124, 124, 241);
+              }
+            }
+
+            button.delete-task-button {
+              &:hover {
+                background: rgb(247, 103, 103);
+              }
+            }
+          }
+        }
+
+        p.task-category {
+          font-size: 0.8em;
+          margin: 0.5em 0;
+          color: rgb(185, 184, 184);
+        }
+
+        div.task-timer {
+          text-align: center;
+          font-size: xx-large;
+          //font-weight: 100;
+
+          button.timer-button {
+            margin-top: 2em;
+            width: 100%;
+            padding: 0.5em 1em;
+            background-color: white;
+            border-radius: 0.2em;
+            border: 0.01em rgb(201, 201, 201) solid;
+            cursor: pointer;
+          }
+
+          button.start-button {
+            color: greenyellow;
+            font-weight: bold;
+            font-size: 0.5em;
+
+            &:hover {
+              border-color: greenyellow;
+            }
+          }
+
+          button.stop-button {
+            color: red;
+
+            &:hover {
+              border-color: rgb(247, 103, 103);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  button#add-button {
+    padding: 0.5em 1em;
+    cursor: pointer;
+    width: max-content;
+    margin-bottom: 1em;
+  }
+
+  div.edit-task-form,
+  div.add-task-form {
+    width: 95%;
+    border: 0.01em solid rgb(185, 184, 184);
+    padding: 0.2em 0.2em;
+    margin-bottom: 1em;
+
+    Form {
+      width: 100%;
+      label {
+        display: flex;
+        flex-direction: column;
+        font-weight: bold;
+        font-size: 1.2em;
+        margin: 0.2em 0;
+        input {
+          margin: 0.5em 0;
+          padding: 0.5em 0.2em;
+        }
+      }
+    }
+
+    .form-buttons {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      button {
+        width: 100%;
+        padding: 0.5em 1em;
+        cursor: pointer;
+        background: none;
+        border-radius: 0.1em;
+        font-weight: bold;
+      }
+    }
+
+    button.cancel-button {
+      border: 0.1em solid rgb(247, 103, 103);
+      color: red;
+      &:hover {
+        border: 0.15em solid red;
+      }
+    }
+
+    #edit-task-button {
+      border: 0.1em solid rgb(124, 124, 241);
+      color: blue;
+      &:hover {
+        border: 0.15em solid blue;
+      }
+    }
+
+    #create-task-button {
+      border: 0.1em solid greenyellow;
+      color: green;
+      &:hover {
+        border: 0.15em solid green;
+      }
+    }
+  }
+}

@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "name": "Water Plants",
+    "category": "Hobby",
+    "time": 900
+  },
+  {
+    "id": 2,
+    "name": "HomeWork",
+    "category": "Study",
+    "time": 90000
+  },
+  {
+    "id": 3,
+    "name": "Workout",
+    "category": "Fitness",
+    "time": 1000
+  }
+]

@@ -1,0 +1,220 @@
+#header {
+  font-size: xx-large;
+  font-weight: 400;
+  margin-top: 1em;
+}
+
+#tasklist {
+  width: 20%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: auto;
+}
+
+#tasklist ::-webkit-scrollbar {
+  width: 2px;
+}
+
+#tasklist ::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+#tasklist ::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+#tasklist ::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+#tasklist ul {
+  list-style-type: none;
+  margin: 1em 0 0.5em 0;
+  width: 100%;
+}
+
+#tasklist ul li {
+  width: 95%;
+}
+
+#tasklist ul li .task-container {
+  margin: 0.5em 0;
+  width: 100%;
+  padding: 0.5em 0.5em;
+  border: 0.01em solid #b9b8b8;
+}
+
+#tasklist ul li .task-container div.task-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#tasklist ul li .task-container div.task-top p.task-name {
+  font-weight: 600;
+  font-size: larger;
+}
+
+#tasklist ul li .task-container div.task-top div.task-buttons button {
+  background: none;
+  border: none;
+  margin: 0.2em 0.5em;
+  cursor: pointer;
+  padding: 0.2em 0.3em;
+  border-radius: 0.2em;
+}
+
+#tasklist ul li .task-container div.task-top div.task-buttons button.edit-task-button:hover {
+  background: #7c7cf1;
+}
+
+#tasklist ul li .task-container div.task-top div.task-buttons button.delete-task-button:hover {
+  background: #f76767;
+}
+
+#tasklist ul li .task-container p.task-category {
+  font-size: 0.8em;
+  margin: 0.5em 0;
+  color: #b9b8b8;
+}
+
+#tasklist ul li .task-container div.task-timer {
+  text-align: center;
+  font-size: xx-large;
+}
+
+#tasklist ul li .task-container div.task-timer button.timer-button {
+  margin-top: 2em;
+  width: 100%;
+  padding: 0.5em 1em;
+  background-color: white;
+  border-radius: 0.2em;
+  border: 0.01em #c9c9c9 solid;
+  cursor: pointer;
+}
+
+#tasklist ul li .task-container div.task-timer button.start-button {
+  color: greenyellow;
+  font-weight: bold;
+  font-size: 0.5em;
+}
+
+#tasklist ul li .task-container div.task-timer button.start-button:hover {
+  border-color: greenyellow;
+}
+
+#tasklist ul li .task-container div.task-timer button.stop-button {
+  color: red;
+}
+
+#tasklist ul li .task-container div.task-timer button.stop-button:hover {
+  border-color: #f76767;
+}
+
+#tasklist button#add-button {
+  padding: 0.5em 1em;
+  cursor: pointer;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  margin-bottom: 1em;
+}
+
+#tasklist div.edit-task-form,
+#tasklist div.add-task-form {
+  width: 95%;
+  border: 0.01em solid #b9b8b8;
+  padding: 0.2em 0.2em;
+  margin-bottom: 1em;
+}
+
+#tasklist div.edit-task-form Form,
+#tasklist div.add-task-form Form {
+  width: 100%;
+}
+
+#tasklist div.edit-task-form Form label,
+#tasklist div.add-task-form Form label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-weight: bold;
+  font-size: 1.2em;
+  margin: 0.2em 0;
+}
+
+#tasklist div.edit-task-form Form label input,
+#tasklist div.add-task-form Form label input {
+  margin: 0.5em 0;
+  padding: 0.5em 0.2em;
+}
+
+#tasklist div.edit-task-form .form-buttons,
+#tasklist div.add-task-form .form-buttons {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#tasklist div.edit-task-form .form-buttons button,
+#tasklist div.add-task-form .form-buttons button {
+  width: 100%;
+  padding: 0.5em 1em;
+  cursor: pointer;
+  background: none;
+  border-radius: 0.1em;
+  font-weight: bold;
+}
+
+#tasklist div.edit-task-form button.cancel-button,
+#tasklist div.add-task-form button.cancel-button {
+  border: 0.1em solid #f76767;
+  color: red;
+}
+
+#tasklist div.edit-task-form button.cancel-button:hover,
+#tasklist div.add-task-form button.cancel-button:hover {
+  border: 0.15em solid red;
+}
+
+#tasklist div.edit-task-form #edit-task-button,
+#tasklist div.add-task-form #edit-task-button {
+  border: 0.1em solid #7c7cf1;
+  color: blue;
+}
+
+#tasklist div.edit-task-form #edit-task-button:hover,
+#tasklist div.add-task-form #edit-task-button:hover {
+  border: 0.15em solid blue;
+}
+
+#tasklist div.edit-task-form #create-task-button,
+#tasklist div.add-task-form #create-task-button {
+  border: 0.1em solid greenyellow;
+  color: green;
+}
+
+#tasklist div.edit-task-form #create-task-button:hover,
+#tasklist div.add-task-form #create-task-button:hover {
+  border: 0.15em solid green;
+}
+/*# sourceMappingURL=home.css.map */
